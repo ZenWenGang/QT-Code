@@ -1,0 +1,32 @@
+#include "widget.h"
+#include "ui_widget.h"
+
+Widget::Widget(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::Widget)
+{
+    ui->setupUi(this);
+    srand(time(0));
+}
+
+Widget::~Widget()
+{
+    delete ui;
+}
+
+void Widget::on_pushButton_agree_clicked()
+{
+    ui->label->setText("女神，女神来嘴一个，mua~~");
+}
+
+
+void Widget::on_pushButton_reject_clicked()
+{
+    int width=this->geometry().width();
+    int height=this->geometry().height();
+
+    int x=rand()%width;
+    int y=rand()%height;
+    ui->pushButton_reject->move(x,y);
+}
+
