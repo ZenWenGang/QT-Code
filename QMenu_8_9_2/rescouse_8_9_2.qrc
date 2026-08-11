@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>tupian/daxiao.png</file>
+        <file>tupian/doge.png</file>
+        <file>tupian/down.png</file>
+    </qresource>
+</RCC>
